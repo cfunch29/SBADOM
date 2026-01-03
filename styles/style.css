@@ -2,8 +2,10 @@
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
     'Lucida Sans Unicode', Verdana, sans-serif;
 }
+
 body {
     background-color: burlywood;
+    color: rgb(73, 25, 1);
 }
 body, html {
     margin: 0;
@@ -16,4 +18,28 @@ body, html {
 * ::before, 
 * ::after {
     box-sizing: inherit;
+}
+
+nav {
+    border: 3px solid white;
+    padding: 3%;
+    background-color: rgb(69, 33, 0);
+    color: white;
+}
+nav a {
+    line-height: 3rem;
+    padding: 0 1rem;
+    text-decoration: underline;
+    color: white;
+}
+
+#menu a:hover {
+   
+}
+#menu {
+    position: relative;
+}
+
+nav a.active {
+    background-color: brown;
 }

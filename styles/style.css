@@ -1,21 +1,23 @@
 * {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
-    'Lucida Sans Unicode', Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Verdana, sans-serif;
 }
 
 body {
     background-color: burlywood;
     color: rgb(73, 25, 1);
 }
-body, html {
+
+body,
+html {
     margin: 0;
     padding: 0;
     height: 100%;
     box-sizing: border-box;
 }
 
-*, 
-* ::before, 
+*,
+* ::before,
 * ::after {
     box-sizing: inherit;
 }
@@ -26,6 +28,7 @@ nav {
     background-color: rgb(69, 33, 0);
     color: white;
 }
+
 nav a {
     line-height: 3rem;
     padding: 0 1rem;
@@ -34,8 +37,10 @@ nav a {
 }
 
 #menu a:hover {
-   
+    text-decoration: underline;
+    color: crimson;
 }
+
 #menu {
     position: relative;
 }

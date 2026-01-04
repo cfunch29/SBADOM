@@ -48,3 +48,32 @@ nav a {
 nav a.active {
     background-color: brown;
 }
+
+section{
+    margin: 0;
+    padding: 0;
+    display: block;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div.h4 {
+    display: block;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-flow: row;
+    justify-content: center;
+}

@@ -21,3 +21,4 @@ Creating a simple landing page for launching new site
 ---
 
 - there is an error in my console for a chrome extension, I can't figure out how to fix it 
+- also a terminal error that it's not pulling node script. but if I change directories inside terminal it runs. I never had this issue before. I tried updating/restarting VS but the error still exists.

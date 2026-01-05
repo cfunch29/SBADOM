@@ -18,16 +18,16 @@ subMenu.style.display = "none";
 // menu links
 for (let link of navLinks) {
     let anchor = document.createElement("a");
-     anchor.setAttribute("href", "../pages/index.html");
+    anchor.setAttribute("href", "../pages/index.html");
     anchor.textContent = link.text;
-//   anchor.href = link.href; 
-// - not showing child page profile - error 
+    //    anchor.href = link.href; 
+    // - not showing child page profile - error 
     navMenu.appendChild(anchor);
 
 
     if (link.children) {
         anchor.addEventListener("mouseover", function () {
-            subMenu.innerHTML = " ";
+            subMenu.innerHTML = "";
 
             const profile = document.createElement("a");
             profile.textContent = link.children[0].text;
@@ -37,22 +37,22 @@ for (let link of navLinks) {
             this.parentNode.nextElementSibling.style.display = "block";
         });
     }
-
-    navMenu.addEventListener("mouseout", function () {
-        const first = this.firstElementChild;
-        const second = first.nextElementSibling;
-
-        first.style.color = " ";
-        second.style.color = " ";
-        this.nextElementSibling.style.display = "none";
-
-    });
 }
+navMenu.addEventListener("mouseout", function () {
+    const first = this.firstElementChild;
+    const second = first.nextElementSibling;
 
-// alert("Subscribe now to get updates");
+    first.style.color = "";
+    second.style.color = "";
+    this.nextElementSibling.style.display = "none";
+
+});
+
+
+alert("Subscribe now to get updates");
 
 document.getElementById("notify").addEventListener("click", function () {
-    alert("Notified!");
+    prompt("Notified!");
 });
 
 const changeCountdown = document.getElementById("notify");
@@ -184,4 +184,13 @@ function getRemainingTime() {
 let countdown = setInterval(getRemainingTime, 1000)
 
 getRemainingTime();
+
+function validateForm(){
+    const form = document.forms["formNotify"] ["fname"].value;
+    if (form == ""){
+        alert("Must complete");
+        return false;
+    }
+}
+
 

@@ -20,7 +20,15 @@ Creating a simple landing page for launching new site
 
 ### Reflection
 ---
+1. Were there any requirements that were difficult to implement? What do you think would make them easier to implement in future projects?
 
+- the parent/child/sibling relationship was difficult for me. I need to study and practice more
+
+2. What would you add to, or change about your application if given more time?
+
+- I would have added more to the DOM event form 
+
+## Errors
 - there is an error in my console for a chrome extension, I can't figure out how to fix it 
 "contentScript.bundle.js:1  GET chrome-extension://pbanhockgagggenencehbnadejlgchfc/assets/userReportLinkedCandidate.json net::ERR_FILE_NOT_FOUND" 
 
@@ -43,3 +51,4 @@ Error: Cannot find module '/Users/courtneyfunchess/Desktop/Per-Scholas/316SBA/sc
 }
 
 Node.js v24.11.1"
+

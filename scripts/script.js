@@ -1,25 +1,71 @@
 var navLinks = [
-    { text: 'about', href: '/about' },
     { text: 'home', href: '/home' },
+    {
+        text: 'account', href: '/account', children: [
+            { text: "profile", href: '/account/profile' },
+        ]
+    }
 ];
 
 const navMenu = document.getElementById('menu');
-// modify style 
 navMenu.style.backgroundColor = 'var(--navMenu-bg)';
+// modify style 
+const subMenu = document.getElementById("submenu");
+subMenu.style.display = "none";
+
+
 
 // menu links
 for (let link of navLinks) {
     let anchor = document.createElement("a");
-    anchor.setAttribute("href", link.href);
+     anchor.setAttribute("href", "../pages/index.html");
     anchor.textContent = link.text;
+//   anchor.href = link.href; 
+// - not showing child page profile - error 
     navMenu.appendChild(anchor);
+
+
+    if (link.children) {
+        anchor.addEventListener("mouseover", function () {
+            subMenu.innerHTML = " ";
+
+            const profile = document.createElement("a");
+            profile.textContent = link.children[0].text;
+            profile.href = link.children[0].href;
+            subMenu.appendChild(profile)
+
+            this.parentNode.nextElementSibling.style.display = "block";
+        });
+    }
+
+    navMenu.addEventListener("mouseout", function () {
+        const first = this.firstElementChild;
+        const second = first.nextElementSibling;
+
+        first.style.color = " ";
+        second.style.color = " ";
+        this.nextElementSibling.style.display = "none";
+
+    });
 }
 
-const mainContent = document.querySelector("section");
-mainContent.style.backgroundColor = 'var(--main-bg)';
-mainContent.innerHTML = '<h1>Launching Soon</h1>';
-mainContent.classList.add('flex-ctr');
+// alert("Subscribe now to get updates");
 
+document.getElementById("notify").addEventListener("click", function () {
+    alert("Notified!");
+});
+
+const changeCountdown = document.getElementById("notify");
+changeCountdown.addEventListener("mouseover", moused);
+changeCountdown.addEventListener("mouseout", out);
+
+function moused() {
+    document.getElementById("notify").style.backgroundColor = 'red'
+}
+
+function out() {
+    document.getElementById("notify").style.backgroundColor = 'grey'
+}
 
 const months = [
     "January",

@@ -2,6 +2,7 @@
 ## 
 Creating a simple landing page for launching new site 
 - I chose this simple project because small businesses are always looking for websites and this is a porfolio starter kit essential!
+- Add alert for coming soon
 - I decided to add a countdown feature 
 
 

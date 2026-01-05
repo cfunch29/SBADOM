@@ -1,3 +1,26 @@
+var navLinks = [
+    { text: 'about', href: '/about' },
+    { text: 'home', href: '/home' },
+];
+
+const navMenu = document.getElementById('menu');
+// modify style 
+navMenu.style.backgroundColor = 'var(--navMenu-bg)';
+
+// menu links
+for (let link of navLinks) {
+    let anchor = document.createElement("a");
+    anchor.setAttribute("href", link.href);
+    anchor.textContent = link.text;
+    navMenu.appendChild(anchor);
+}
+
+const mainContent = document.querySelector("section");
+mainContent.style.backgroundColor = 'var(--main-bg)';
+mainContent.innerHTML = '<h1>Launching Soon</h1>';
+mainContent.classList.add('flex-ctr');
+
+
 const months = [
     "January",
     "February",
@@ -49,7 +72,7 @@ const date = futureDate.getDate();
 const weekday = weekdays[futureDate.getDay()];
 // console.log(weekday);
 
-launch.textContent = `launch ends on ${weekday}, ${date} ${month} ${year} ${hours}:${minutes}am`;
+launch.textContent = `site launches on ${weekday}, ${date} ${month} ${year} ${hours}:${minutes}am`;
 // function will input the launch end on the year - dynamic
 
 // future time in ms
@@ -95,9 +118,9 @@ function getRemainingTime() {
         days, hours, minutes, seconds
     ];
 
-    function format(components){
+    function format(components) {
         // add zero in countdown counter if less than 10
-        if(components < 10){
+        if (components < 10) {
             return (components = `0${components}`);
         }
         // otherwise display the component as is

@@ -8,6 +8,7 @@ var navLinks = [
 ];
 
 const navMenu = document.getElementById('menu');
+// error for navMenu not connected to submenu to show and hide submenu children for profile
 navMenu.style.backgroundColor = 'var(--navMenu-bg)';
 // modify style 
 const subMenu = document.getElementById("submenu");

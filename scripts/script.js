@@ -52,7 +52,7 @@ navMenu.addEventListener("mouseout", function () {
 alert("Subscribe now to get updates");
 
 document.getElementById("notify").addEventListener("click", function () {
-    prompt("Notified!");
+    prompt("📧 Get Notified!");
 });
 
 const changeCountdown = document.getElementById("notify");
